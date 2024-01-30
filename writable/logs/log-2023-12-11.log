@@ -1,0 +1,31 @@
+INFO - 2023-12-11 19:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:01:11 --> Sesi pengguna disimpan: {"logged_in":true,"role":"administrator","id_user":"7","nama":"azizi syafa asadel","foto":"1700331336_657345b62988aeab74d6.jpg","username":"azizi","password":"7110eda4d09e062aa5e4a390b0a572ac0d2c0220"}
+INFO - 2023-12-11 19:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-11 19:04:09 --> Gagal autentikasi untuk pengguna: 222
+INFO - 2023-12-11 19:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-11 19:05:02 --> Gagal autentikasi untuk pengguna: freya@jkt48.com12333
+INFO - 2023-12-11 19:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-11 19:40:09 --> Gagal autentikasi untuk pengguna: freya@jkt48.com1234\
+INFO - 2023-12-11 19:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-11 19:40:14 --> Gagal autentikasi untuk pengguna: freya@jkt48.com1234
+INFO - 2023-12-11 19:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-11 19:40:28 --> Gagal autentikasi untuk pengguna: freya@jkt48.com123456
+INFO - 2023-12-11 19:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 19:40:35 --> Sesi pengguna disimpan: {"logged_in":true,"role":"administrator","id_user":"7","nama":"azizi syafa asadel","foto":"1700331336_657345b62988aeab74d6.jpg","username":"azizi","password":"7110eda4d09e062aa5e4a390b0a572ac0d2c0220"}
+INFO - 2023-12-11 19:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 20:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 20:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 20:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 20:14:00 --> Sesi pengguna disimpan: {"logged_in":true,"role":"administrator","id_user":"7","nama":"azizi syafa asadel","foto":"1700331336_657345b62988aeab74d6.jpg","username":"azizi","password":"7110eda4d09e062aa5e4a390b0a572ac0d2c0220"}
+INFO - 2023-12-11 20:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

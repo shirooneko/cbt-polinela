@@ -1,0 +1,654 @@
+INFO - 2024-01-05 11:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 19:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-05 19:53:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'cbt-polinela', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 19:53:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 19:56:23 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'root', '', 'cbt-polinela', 3306, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'root', '', 'cbt-polinela', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 19:56:23 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 19:57:18 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 19:57:18 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 19:57:25 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('asuna.kawaiihos...', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 19:57:25 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 20:05:15 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('142.132.150.169', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('142.132.150.169', 'jschgdqm_shiroo', 'Semangk@27', 'jschgdqm_cbt-po...', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 20:05:15 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 20:56:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 3306, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 20:56:58 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 20:57:37 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 18187, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 18187, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 20:57:37 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 21:24:42 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 18187, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'jschgdqm_cbt-po...', 18187, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 21:24:42 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 21:29:43 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'cbt', 18187, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'cbt', 18187, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 21:29:43 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+ERROR - 2024-01-05 21:29:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14216 in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'E:\\xixixi\\cbt-p...', 185)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'cbt', 18187, '', 0)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#8 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('mysql-159985-0....', 'admin', 'iQZAcghu', 'cbt', 18187, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-05 21:29:58 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')

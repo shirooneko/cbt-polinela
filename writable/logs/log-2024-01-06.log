@@ -1,0 +1,76 @@
+ERROR - 2024-01-06 00:55:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'cbtpolinela_calljumpgo'@'140.213.117.173' (using password: YES) in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('nss.h.filess.io', 'cbtpolinela_cal...', 'd75e5fd26d9c20b...', 'cbtpolinela_cal...', 3306, '', 0)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#7 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'140.213.117.173' (using password: YES) in E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 E:\xixixi\cbt-polinela\app\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+#6 E:\xixixi\cbt-polinela\app\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+#7 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+#8 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xixixi\cbt-polinela\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xixixi\cbt-polinela\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-p...')
+#12 {main}
+CRITICAL - 2024-01-06 00:55:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'140.213.117.173' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(68): App\Models\UserModel->findByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xixixi\\cbt-polinela\\public\\index.php')
+INFO - 2024-01-06 00:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 00:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 01:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 17:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

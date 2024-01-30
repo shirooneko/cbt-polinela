@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Helpers;
+use Bluerhinos\phpMQTT;
+
+class MqttHelper
+{
+    public function sendMQTTData($data, $mqtt_broker, $mqtt_port, $mqtt_topic)
+    {
+        $mqtt = new \Bluerhinos\phpMQTT($mqtt_broker, $mqtt_port, "cbt-polinela");
+
+        if ($mqtt->connect()) {
+            $mqtt->publish($mqtt_topic, $data, 0);
+            $mqtt->close();
+            echo "Pesan berhasil dikirim ke broker MQTT.";
+            die();
+        } else {
+            echo "Gagal terhubung ke broker MQTT.";
+        }
+    }
+}
